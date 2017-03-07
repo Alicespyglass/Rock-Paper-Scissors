@@ -7,4 +7,7 @@ describe 'rock paper scissors game' do
   it 'returns "Paper" when input is paper' do
     expect(rock_paper_scissors("Paper")).to eq 'Paper'
   end
+  it 'returns "Scissors" when input is scissors' do #Given inpuot scissors
+    expect(rock_paper_scissors("Scissors")).to eq 'Scissors'
+  end
 end

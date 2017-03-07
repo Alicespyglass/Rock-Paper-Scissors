@@ -9,6 +9,13 @@ else (input.downcase == "scissors") || (input.downcase == "scissor")
  end
 end
 
-def computer_choice
+def random_num
  rand(1..3)
+end
+
+def computer_choice(x)
+  # if x = 1, return "Rock"
+  if x == 1
+    "Rock"
+  end
 end

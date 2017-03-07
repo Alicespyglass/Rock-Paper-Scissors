@@ -12,12 +12,19 @@ describe 'rock paper scissors game' do
   end
 end
 
-describe 'computer choice' do
+describe 'random_num' do
   #it 'returns either "Rock", "Paper" or "Scissors"' do #Given any input
   #expect(computer_choice).to eq 'Rock' || 'Paper' || 'Scissors'
   #end
   it 'returns either 1, 2 or 3' do
     # run computer choice 100 times. We want to count the three values and check they're evenly distributed
-    expect(computer_choice).to eq 1 || 2 || 3
+    expect(random_num).to eq (1 || 2 || 3) # || expect(random_num).to eq 2 || expect(random_num).to eq 3
+  end
+end
+
+describe 'computer_choice' do
+  # returns Rock if random number is 1
+  it 'returns Rock if random number is 1' do
+    expect(computer_choice(1)).to eq "Rock"
   end
 end

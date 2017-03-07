@@ -1,25 +1,27 @@
 def rock_paper_scissors(input)
+  user_choice = ""
  # If input is equal to 1, return rock
 if input.downcase == "rock"
-  'Rock'
+  user_choice = 'Rock'
 elsif input.downcase == "paper"
-  'Paper'
+  user_choice = 'Paper'
 else (input.downcase == "scissors") || (input.downcase == "scissor")
-  'Scissors'
+  user_choice = 'Scissors'
  end
+ # puts "#{user_choice}, #{computer_choice}"
+ user_choice
+ computer_choice
 end
 
-def random_num
- rand(1..3)
-end
 
-def computer_choice(x)
+def computer_choice
+  random_num =  rand(1..3)
   # if x = 1, return "Rock"
-  if x == 1
+  if random_num == 1
     "Rock"
-  elsif x == 2
+  elsif random_num == 2
     "Paper"
-  elsif x == 3
+  elsif random_num == 3
     "Scissors"
   end
 end

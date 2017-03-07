@@ -10,6 +10,9 @@ describe 'rock paper scissors game' do
   it 'returns "Scissors" when input is scissors' do #Given inpuot scissors
     expect(rock_paper_scissors("Scissors")).to eq 'Scissors'
   end
+  it 'returns user input and computer choice' do
+    expect(rock_paper_scissors("Rock")).to eq computer_choice
+  end
 end
 
 describe 'random_num' do
@@ -29,5 +32,8 @@ describe 'computer_choice' do
   end
   it 'returns Scissors if number is 3' do
     expect(computer_choice(3)).to eq "Scissors"
-  end 
+  end
+  it 'returns "Rock", "Paper" or "Scissors" depending on random number' do
+   expect(computer_choice(random_num)).to eq("Rock").or eq("Paper").or eq("Scissors")
+  end
 end

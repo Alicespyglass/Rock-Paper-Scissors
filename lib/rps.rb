@@ -8,3 +8,7 @@ else (input.downcase == "scissors") || (input.downcase == "scissor")
   'Scissors'
  end
 end
+
+def computer_choice
+ rand(1..3)
+end

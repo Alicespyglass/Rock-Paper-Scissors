@@ -17,5 +17,9 @@ def computer_choice(x)
   # if x = 1, return "Rock"
   if x == 1
     "Rock"
+  elsif x == 2
+    "Paper"
+  elsif x == 3
+    "Scissors"
   end
 end

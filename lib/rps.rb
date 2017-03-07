@@ -8,10 +8,8 @@ elsif input.downcase == "paper"
 else (input.downcase == "scissors") || (input.downcase == "scissor")
   user_choice = 'Scissors'
  end
- # puts "#{user_choice}, #{computer_choice}"
- user_choice
- computer_choice
-end
+ "#{user_choice}, #{computer_choice}"
+ end
 
 
 def computer_choice

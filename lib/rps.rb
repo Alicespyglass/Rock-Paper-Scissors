@@ -1,4 +1,4 @@
-def rock_paper_scissors(input)
+def user_input(input)
   user_choice = ""
  # If input is equal to 1, return rock
 if input.downcase == "rock"
@@ -8,18 +8,32 @@ elsif input.downcase == "paper"
 else (input.downcase == "scissors") || (input.downcase == "scissor")
   user_choice = 'Scissors'
  end
- "#{user_choice}, #{computer_choice}"
- end
+ user_choice
+end
 
 
-def computer_choice
+def computer_input
   random_num =  rand(1..3)
   # if x = 1, return "Rock"
+  computer_choice = ""
   if random_num == 1
-    "Rock"
+    computer_choice = "Rock"
   elsif random_num == 2
-    "Paper"
+    computer_choice = "Paper"
   elsif random_num == 3
-    "Scissors"
+    computer_choice = "Scissors"
   end
+  computer_choice
+end
+
+def compare_choices(x)
+  #When user choice is "rock" and computer choice is "rock" return draw.
+  if user_input(x) == computer_input
+    'Draw'
+  end
+
+#When user choice is "rock" and computer choice is "scissors" return win.
+#When user choice is "rock" and computer choice is "paper" return lose.
+
+
 end

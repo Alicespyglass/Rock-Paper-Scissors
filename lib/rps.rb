@@ -30,18 +30,27 @@ end
 def compare_choices(x)
   outcome = ""
   #When user choice is "rock" and computer choice is "rock" return draw.
-  if user_input(x) == computer_input
-    outcome = 'Draw'
+  if user_input(x) == "Rock"
+    if computer_input == "Rock"
+      outcome = 'Draw'
+    elsif computer_input == "Paper"
+      outcome = 'Lose'
+    else outcome = 'Win'
+    end
+
+  elsif user_input(x) == "Paper"
+    if computer_input == "Paper"
+      outcome = 'Draw'
+    elsif computer_input == "Scissors"
+      outcome = 'Lose'
+    else outcome = 'Win'
+    end
+    
   end
 
-  case user_input(x) == "Rock"
 
-  when computer_input == "Paper"
-    outcome = 'Lose'
-  else
-    outcome = 'Win'
-  end
-
+puts computer_input
+puts outcome
 outcome
 #When user choice is "rock" and computer choice is "scissors" return win.
 #When user choice is "rock" and computer choice is "paper" return lose.
